@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		718775692D0F2A68008E9945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718775682D0F2A68008E9945 /* AppDelegate.swift */; };
+		7187756B2D0F2A68008E9945 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7187756A2D0F2A68008E9945 /* SceneDelegate.swift */; };
+		7187756D2D0F2A68008E9945 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7187756C2D0F2A68008E9945 /* ViewController.swift */; };
+		718775702D0F2A68008E9945 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7187756F2D0F2A68008E9945 /* Base */; };
+		718775732D0F2A68008E9945 /* Cobalt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 718775712D0F2A68008E9945 /* Cobalt.xcdatamodeld */; };
+		718775752D0F2A69008E9945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 718775742D0F2A69008E9945 /* Assets.xcassets */; };
+		718775782D0F2A69008E9945 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 718775772D0F2A69008E9945 /* Base */; };
+		718775832D0F2A69008E9945 /* CobaltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718775822D0F2A69008E9945 /* CobaltTests.swift */; };
+		7187758D2D0F2A69008E9945 /* CobaltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7187758C2D0F2A69008E9945 /* CobaltUITests.swift */; };
+		7187758F2D0F2A69008E9945 /* CobaltUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7187758E2D0F2A69008E9945 /* CobaltUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7187757F2D0F2A69008E9945 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7187755D2D0F2A68008E9945 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 718775642D0F2A68008E9945;
+			remoteInfo = Cobalt;
+		};
+		718775892D0F2A69008E9945 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7187755D2D0F2A68008E9945 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 718775642D0F2A68008E9945;
+			remoteInfo = Cobalt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		718775652D0F2A68008E9945 /* Cobalt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cobalt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		718775682D0F2A68008E9945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7187756A2D0F2A68008E9945 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7187756C2D0F2A68008E9945 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7187756F2D0F2A68008E9945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		718775722D0F2A68008E9945 /* Cobalt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cobalt.xcdatamodel; sourceTree = "<group>"; };
+		718775742D0F2A69008E9945 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		718775772D0F2A69008E9945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		718775792D0F2A69008E9945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7187757E2D0F2A69008E9945 /* CobaltTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CobaltTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		718775822D0F2A69008E9945 /* CobaltTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobaltTests.swift; sourceTree = "<group>"; };
+		718775882D0F2A69008E9945 /* CobaltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CobaltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7187758C2D0F2A69008E9945 /* CobaltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobaltUITests.swift; sourceTree = "<group>"; };
+		7187758E2D0F2A69008E9945 /* CobaltUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobaltUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		718775622D0F2A68008E9945 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7187757B2D0F2A69008E9945 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718775852D0F2A69008E9945 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7187755C2D0F2A68008E9945 = {
+			isa = PBXGroup;
+			children = (
+				718775672D0F2A68008E9945 /* Cobalt */,
+				718775812D0F2A69008E9945 /* CobaltTests */,
+				7187758B2D0F2A69008E9945 /* CobaltUITests */,
+				718775662D0F2A68008E9945 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		718775662D0F2A68008E9945 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				718775652D0F2A68008E9945 /* Cobalt.app */,
+				7187757E2D0F2A69008E9945 /* CobaltTests.xctest */,
+				718775882D0F2A69008E9945 /* CobaltUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		718775672D0F2A68008E9945 /* Cobalt */ = {
+			isa = PBXGroup;
+			children = (
+				718775682D0F2A68008E9945 /* AppDelegate.swift */,
+				7187756A2D0F2A68008E9945 /* SceneDelegate.swift */,
+				7187756C2D0F2A68008E9945 /* ViewController.swift */,
+				7187756E2D0F2A68008E9945 /* Main.storyboard */,
+				718775742D0F2A69008E9945 /* Assets.xcassets */,
+				718775762D0F2A69008E9945 /* LaunchScreen.storyboard */,
+				718775792D0F2A69008E9945 /* Info.plist */,
+				718775712D0F2A68008E9945 /* Cobalt.xcdatamodeld */,
+			);
+			path = Cobalt;
+			sourceTree = "<group>";
+		};
+		718775812D0F2A69008E9945 /* CobaltTests */ = {
+			isa = PBXGroup;
+			children = (
+				718775822D0F2A69008E9945 /* CobaltTests.swift */,
+			);
+			path = CobaltTests;
+			sourceTree = "<group>";
+		};
+		7187758B2D0F2A69008E9945 /* CobaltUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7187758C2D0F2A69008E9945 /* CobaltUITests.swift */,
+				7187758E2D0F2A69008E9945 /* CobaltUITestsLaunchTests.swift */,
+			);
+			path = CobaltUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		718775642D0F2A68008E9945 /* Cobalt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 718775922D0F2A69008E9945 /* Build configuration list for PBXNativeTarget "Cobalt" */;
+			buildPhases = (
+				718775612D0F2A68008E9945 /* Sources */,
+				718775622D0F2A68008E9945 /* Frameworks */,
+				718775632D0F2A68008E9945 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cobalt;
+			productName = Cobalt;
+			productReference = 718775652D0F2A68008E9945 /* Cobalt.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7187757D2D0F2A69008E9945 /* CobaltTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 718775952D0F2A69008E9945 /* Build configuration list for PBXNativeTarget "CobaltTests" */;
+			buildPhases = (
+				7187757A2D0F2A69008E9945 /* Sources */,
+				7187757B2D0F2A69008E9945 /* Frameworks */,
+				7187757C2D0F2A69008E9945 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				718775802D0F2A69008E9945 /* PBXTargetDependency */,
+			);
+			name = CobaltTests;
+			productName = CobaltTests;
+			productReference = 7187757E2D0F2A69008E9945 /* CobaltTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		718775872D0F2A69008E9945 /* CobaltUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 718775982D0F2A69008E9945 /* Build configuration list for PBXNativeTarget "CobaltUITests" */;
+			buildPhases = (
+				718775842D0F2A69008E9945 /* Sources */,
+				718775852D0F2A69008E9945 /* Frameworks */,
+				718775862D0F2A69008E9945 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7187758A2D0F2A69008E9945 /* PBXTargetDependency */,
+			);
+			name = CobaltUITests;
+			productName = CobaltUITests;
+			productReference = 718775882D0F2A69008E9945 /* CobaltUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7187755D2D0F2A68008E9945 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					718775642D0F2A68008E9945 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					7187757D2D0F2A69008E9945 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 718775642D0F2A68008E9945;
+					};
+					718775872D0F2A69008E9945 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 718775642D0F2A68008E9945;
+					};
+				};
+			};
+			buildConfigurationList = 718775602D0F2A68008E9945 /* Build configuration list for PBXProject "Cobalt" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7187755C2D0F2A68008E9945;
+			productRefGroup = 718775662D0F2A68008E9945 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				718775642D0F2A68008E9945 /* Cobalt */,
+				7187757D2D0F2A69008E9945 /* CobaltTests */,
+				718775872D0F2A69008E9945 /* CobaltUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		718775632D0F2A68008E9945 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				718775752D0F2A69008E9945 /* Assets.xcassets in Resources */,
+				718775782D0F2A69008E9945 /* Base in Resources */,
+				718775702D0F2A68008E9945 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7187757C2D0F2A69008E9945 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718775862D0F2A69008E9945 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		718775612D0F2A68008E9945 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				718775732D0F2A68008E9945 /* Cobalt.xcdatamodeld in Sources */,
+				7187756D2D0F2A68008E9945 /* ViewController.swift in Sources */,
+				718775692D0F2A68008E9945 /* AppDelegate.swift in Sources */,
+				7187756B2D0F2A68008E9945 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7187757A2D0F2A69008E9945 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				718775832D0F2A69008E9945 /* CobaltTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718775842D0F2A69008E9945 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7187758D2D0F2A69008E9945 /* CobaltUITests.swift in Sources */,
+				7187758F2D0F2A69008E9945 /* CobaltUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		718775802D0F2A69008E9945 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 718775642D0F2A68008E9945 /* Cobalt */;
+			targetProxy = 7187757F2D0F2A69008E9945 /* PBXContainerItemProxy */;
+		};
+		7187758A2D0F2A69008E9945 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 718775642D0F2A68008E9945 /* Cobalt */;
+			targetProxy = 718775892D0F2A69008E9945 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7187756E2D0F2A68008E9945 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7187756F2D0F2A68008E9945 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		718775762D0F2A69008E9945 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				718775772D0F2A69008E9945 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		718775902D0F2A69008E9945 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		718775912D0F2A69008E9945 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		718775932D0F2A69008E9945 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cobalt/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bakdaulet.Cobalt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		718775942D0F2A69008E9945 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cobalt/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bakdaulet.Cobalt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		718775962D0F2A69008E9945 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bakdaulet.CobaltTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cobalt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cobalt";
+			};
+			name = Debug;
+		};
+		718775972D0F2A69008E9945 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bakdaulet.CobaltTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cobalt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cobalt";
+			};
+			name = Release;
+		};
+		718775992D0F2A69008E9945 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bakdaulet.CobaltUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cobalt;
+			};
+			name = Debug;
+		};
+		7187759A2D0F2A69008E9945 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bakdaulet.CobaltUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cobalt;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		718775602D0F2A68008E9945 /* Build configuration list for PBXProject "Cobalt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				718775902D0F2A69008E9945 /* Debug */,
+				718775912D0F2A69008E9945 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		718775922D0F2A69008E9945 /* Build configuration list for PBXNativeTarget "Cobalt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				718775932D0F2A69008E9945 /* Debug */,
+				718775942D0F2A69008E9945 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		718775952D0F2A69008E9945 /* Build configuration list for PBXNativeTarget "CobaltTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				718775962D0F2A69008E9945 /* Debug */,
+				718775972D0F2A69008E9945 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		718775982D0F2A69008E9945 /* Build configuration list for PBXNativeTarget "CobaltUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				718775992D0F2A69008E9945 /* Debug */,
+				7187759A2D0F2A69008E9945 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		718775712D0F2A68008E9945 /* Cobalt.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				718775722D0F2A68008E9945 /* Cobalt.xcdatamodel */,
+			);
+			currentVersion = 718775722D0F2A68008E9945 /* Cobalt.xcdatamodel */;
+			path = Cobalt.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7187755D2D0F2A68008E9945 /* Project object */;
+}
