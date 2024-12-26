@@ -12,3 +12,12 @@ struct FavoriteModel {
     let rating: Int
     let image: String
 }
+struct OfferModel {
+    let hours: String
+    let minutes: String
+    let seconds: String
+    let descriptionText: String // Новое описание
+    let imageName: String       // Новое имя изображения
+    let percent: String
+    let countdown: Int
+}
