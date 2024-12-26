@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class AllProductsListViewCell: UICollectionViewCell {
     
@@ -24,9 +25,13 @@ class AllProductsListViewCell: UICollectionViewCell {
         self.layer.opacity = 0.9
     }
     
-    func configure(with product: Product) {
+    func configure(with product: ProductModel) {
         productNameLabel.text = product.name
-        productImage.image = UIImage(named:product.imageName)
+        if let imageUrl = URL(string: product.image) {
+            productImage.kf.setImage(with: imageUrl, placeholder: UIImage(named: "placeholder"))
+        } else {
+            productImage.image = UIImage(named: "ferrari")
+        }
         productPriceLabel.text = "55$"
     }
 
