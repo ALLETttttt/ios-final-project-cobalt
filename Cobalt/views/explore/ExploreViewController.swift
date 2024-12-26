@@ -17,20 +17,36 @@ class ExploreViewController: UIViewController {
     @IBOutlet weak var productListCollectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var products: [Product] = [
-        Product(name: "Apple", imageName: "ferrari"),
-        Product(name: "Banana", imageName: "ferrari"),
-        Product(name: "Cherry", imageName: "ferrari"),
-        Product(name: "Date", imageName: "ferrari"),
-        Product(name: "Eggfruit", imageName: "ferrari")
-    ]
+    var products: [ProductModel] = []
     
-    var filteredProducts: [Product] = []
+    var filteredProducts: [ProductModel] = []
     var isSearchActive: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupProductListCollectionView()
+        loadData()
+    }
+    
+    func loadData() {
+        NetworkManager.shared.fetchProducts { [weak self] products, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("Error loading products:", error)
+                    // Show error alert to user
+                    return
+                }
+                
+                guard let products = products else {
+                    print("No products received")
+                    return
+                }
+                
+                print("Received \(products.count) products")
+                self?.products = products
+                self?.productListCollectionView.reloadData()
+            }
+        }
     }
     
     func setupProductListCollectionView() {
@@ -51,9 +67,11 @@ extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let allProductsListCell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllProductsListViewCell", for: indexPath) as? AllProductsListViewCell else {return UICollectionViewCell()}
         
-        let product = isSearchActive ? filteredProducts[indexPath.row] : products[indexPath.row]
+        let product = products[indexPath.item]
         
-        allProductsListCell.configure(with: product)
+        let singleProduct = isSearchActive ? filteredProducts[indexPath.row] : product
+        
+        allProductsListCell.configure(with: singleProduct)
         
         return allProductsListCell
     }
