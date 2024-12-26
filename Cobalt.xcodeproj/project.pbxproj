@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		67A6F4412D14666500404E36 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A6F4402D14666300404E36 /* FavoriteViewController.swift */; };
-		67A6F4442D1576FD00404E36 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A6F4432D1576FA00404E36 /* FavoriteCell.swift */; };
-		67A6F4472D15978D00404E36 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A6F4462D15978500404E36 /* Favorite.swift */; };
 		7150CD1C2D1743E70033A4B2 /* ProductListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7150CD1B2D1743E70033A4B2 /* ProductListViewCell.xib */; };
 		7150CD1D2D1743E70033A4B2 /* ProductListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150CD1A2D1743E70033A4B2 /* ProductListViewCell.swift */; };
 		718775692D0F2A68008E9945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718775682D0F2A68008E9945 /* AppDelegate.swift */; };
@@ -48,10 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		67A6F4402D14666300404E36 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
-		67A6F4432D1576FA00404E36 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
-		67A6F4462D15978500404E36 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
-    7150CD1A2D1743E70033A4B2 /* ProductListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewCell.swift; sourceTree = "<group>"; };
+		7150CD1A2D1743E70033A4B2 /* ProductListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewCell.swift; sourceTree = "<group>"; };
 		7150CD1B2D1743E70033A4B2 /* ProductListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListViewCell.xib; sourceTree = "<group>"; };
 		718775652D0F2A68008E9945 /* Cobalt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cobalt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		718775682D0F2A68008E9945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,28 +92,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		67A6F43F2D14665700404E36 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				67A6F4402D14666300404E36 /* FavoriteViewController.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		67A6F4422D1576E700404E36 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				67A6F4432D1576FA00404E36 /* FavoriteCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		67A6F4452D15977100404E36 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				67A6F4462D15978500404E36 /* Favorite.swift */,
-			);
-			path = Models;
 		7150CD142D16BBC10033A4B2 /* views */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,9 +133,6 @@
 		718775672D0F2A68008E9945 /* Cobalt */ = {
 			isa = PBXGroup;
 			children = (
-				67A6F4452D15977100404E36 /* Models */,
-				67A6F4422D1576E700404E36 /* Cells */,
-				67A6F43F2D14665700404E36 /* Views */,
 				7150CD152D16BBC90033A4B2 /* cells */,
 				7150CD142D16BBC10033A4B2 /* views */,
 				718775682D0F2A68008E9945 /* AppDelegate.swift */,
@@ -375,15 +343,12 @@
 			files = (
 				718E2FC52D182FA00015AEAA /* CategoryListViewCell.swift in Sources */,
 				718775732D0F2A68008E9945 /* Cobalt.xcdatamodeld in Sources */,
-				67A6F4472D15978D00404E36 /* Favorite.swift in Sources */,
 				7187756D2D0F2A68008E9945 /* ViewController.swift in Sources */,
 				718775692D0F2A68008E9945 /* AppDelegate.swift in Sources */,
-				67A6F4442D1576FD00404E36 /* FavoriteCell.swift in Sources */,
 				718E2FD32D1869DD0015AEAA /* AllProductsListViewCell.swift in Sources */,
 				7150CD1D2D1743E70033A4B2 /* ProductListViewCell.swift in Sources */,
 				718E2FCF2D185F8D0015AEAA /* ExploreViewController.swift in Sources */,
 				7187756B2D0F2A68008E9945 /* SceneDelegate.swift in Sources */,
-				67A6F4412D14666500404E36 /* FavoriteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
