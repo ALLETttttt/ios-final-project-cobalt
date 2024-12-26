@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67087CA32D1D771600FC24A2 /* OfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67087CA22D1D770D00FC24A2 /* OfferCell.swift */; };
+		67087CA62D1D7BE000FC24A2 /* OfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67087CA52D1D7BDE00FC24A2 /* OfferViewController.swift */; };
 		67DA48B12D1D4C270011B894 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DA48B02D1D4C230011B894 /* FavoriteViewController.swift */; };
 		67DA48B42D1D4C750011B894 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DA48B32D1D4C6E0011B894 /* model.swift */; };
 		67DA48B82D1D4D120011B894 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DA48B72D1D4D100011B894 /* FavoriteCell.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		67087CA22D1D770D00FC24A2 /* OfferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCell.swift; sourceTree = "<group>"; };
+		67087CA52D1D7BDE00FC24A2 /* OfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferViewController.swift; sourceTree = "<group>"; };
 		67DA48B02D1D4C230011B894 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		67DA48B32D1D4C6E0011B894 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 		67DA48B72D1D4D100011B894 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
@@ -104,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		67087CA42D1D7B9400FC24A2 /* offer */ = {
+			isa = PBXGroup;
+			children = (
+				67087CA52D1D7BDE00FC24A2 /* OfferViewController.swift */,
+			);
+			path = offer;
+			sourceTree = "<group>";
+		};
 		67DA48AF2D1D4B980011B894 /* favorite */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +135,7 @@
 		7150CD142D16BBC10033A4B2 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				67087CA42D1D7B9400FC24A2 /* offer */,
 				67DA48AF2D1D4B980011B894 /* favorite */,
 				718E2FCD2D185F760015AEAA /* explore */,
 				7187756C2D0F2A68008E9945 /* ViewController.swift */,
@@ -133,6 +146,7 @@
 		7150CD152D16BBC90033A4B2 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				67087CA22D1D770D00FC24A2 /* OfferCell.swift */,
 				67DA48B72D1D4D100011B894 /* FavoriteCell.swift */,
 				718E2FC22D182F7B0015AEAA /* category */,
 				718E2FC12D182F730015AEAA /* product */,
@@ -393,10 +407,12 @@
 				718775732D0F2A68008E9945 /* Cobalt.xcdatamodeld in Sources */,
 				7187756D2D0F2A68008E9945 /* ViewController.swift in Sources */,
 				718775692D0F2A68008E9945 /* AppDelegate.swift in Sources */,
+				67087CA62D1D7BE000FC24A2 /* OfferViewController.swift in Sources */,
 				67DA48B12D1D4C270011B894 /* FavoriteViewController.swift in Sources */,
 				67DA48B82D1D4D120011B894 /* FavoriteCell.swift in Sources */,
 				67DA48B42D1D4C750011B894 /* model.swift in Sources */,
 				718E2FD32D1869DD0015AEAA /* AllProductsListViewCell.swift in Sources */,
+				67087CA32D1D771600FC24A2 /* OfferCell.swift in Sources */,
 				7150CD1D2D1743E70033A4B2 /* ProductListViewCell.swift in Sources */,
 				718E2FCF2D185F8D0015AEAA /* ExploreViewController.swift in Sources */,
 				716AB35A2D1D6A3F000FFC83 /* APIService.swift in Sources */,
