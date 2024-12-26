@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
     
@@ -15,16 +16,39 @@ class ViewController: UIViewController {
     @IBOutlet weak var previewImage: UIImageView!
     
     let categoryIconImageList = ["Electronics", "Jewellery", "Men`s clothing", "Women`s clothing"]
+    var products: [ProductModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        loadData()
         setupPreviewImage()
     }
     
     func setupPreviewImage() {
         previewImage.layer.cornerRadius = 10.0
         previewImage.layer.masksToBounds = true
+    }
+    
+    func loadData() {
+        NetworkManager.shared.fetchProducts { [weak self] products, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("Error loading products:", error)
+                    // Show error alert to user
+                    return
+                }
+                
+                guard let products = products else {
+                    print("No products received")
+                    return
+                }
+                
+                print("Received \(products.count) products")
+                self?.products = products
+                self?.productListCollectionView.reloadData()
+            }
+        }
     }
     
     func setupCollectionView() {
@@ -59,11 +83,12 @@ extension ViewController:
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == productListCollectionView {
-            return 50
+            print("Number of products:", products.count)
+            return products.count
         } else if collectionView == categoryListCollectionView {
             return categoryIconImageList.count
         }
-        return 777
+        return 0
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)
@@ -71,8 +96,15 @@ extension ViewController:
         if collectionView == productListCollectionView {
             let productListCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductListViewCell", for: indexPath) as! ProductListViewCell
             
-            productListCell.titleProductLabel.text = "Test title"
-            productListCell.imageProductView.image = UIImage(named: "ferrari")
+            let product = products[indexPath.item]
+            productListCell.titleProductLabel.text = product.name
+            
+            if let imageUrl = URL(string: product.image) {
+                productListCell.imageProductView.kf.setImage(with: imageUrl, placeholder: UIImage(named: "placeholder"))
+            } else {
+                productListCell.imageProductView.image = UIImage(named: "ferrari")
+            }
+//            productListCell.imageProductView.image = UIImage(named: "ferrari")
             
             return productListCell
         }
