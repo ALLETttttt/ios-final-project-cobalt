@@ -35,7 +35,7 @@ import Alamofire
 
 class NetworkManager {
     static let shared = NetworkManager()
-    private let baseURL = "http://127.0.0.1:8000/api"
+    private let baseURL = "https://19c0-2-73-221-158.ngrok-free.app/api"
     
     func fetchProducts(completion: @escaping ([ProductModel]?, Error?) -> Void) {
         AF.request("\(baseURL)/products/", method: .get)
