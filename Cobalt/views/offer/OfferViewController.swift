@@ -13,16 +13,14 @@ class OfferViewController: UIViewController, UICollectionViewDataSource, UIColle
     @IBOutlet weak var collectionView: UICollectionView!
 
     // MARK: - Properties
-    private var offers: [OfferModel] = [
-        OfferModel(hours: "08", minutes: "34", seconds: "52", descriptionText: "Limited Offer!", imageName: "example_image1",percent: "70%",countdown: 3600),
-        OfferModel(hours: "12", minutes: "15", seconds: "10", descriptionText: "Special Deal!", imageName: "example_image1",percent: "30%", countdown: 7200),
-        OfferModel(hours: "02", minutes: "44", seconds: "30", descriptionText: "Hurry Up!", imageName: "example_image1",percent: "20%",countdown: 14400)
-    ]
+    
+    var offers: [OfferModel] = []
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        loadData()
     }
 
     // MARK: - Setup
@@ -30,6 +28,27 @@ class OfferViewController: UIViewController, UICollectionViewDataSource, UIColle
         collectionView.dataSource = self
         collectionView.delegate = self
         
+    }
+    
+    func loadData() {
+        NetworkManager.shared.fetchOffers { [weak self] offers, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("Error loading products:", error)
+                    // Show error alert to user
+                    return
+                }
+                
+                guard let offers = offers else {
+                    print("No products received")
+                    return
+                }
+                
+                print("Received \(offers.count) products")
+                self?.offers = offers
+                self?.collectionView.reloadData()
+            }
+        }
     }
 
     // MARK: - Collection View Data Source
@@ -42,7 +61,7 @@ class OfferViewController: UIViewController, UICollectionViewDataSource, UIColle
             return UICollectionViewCell()
         }
         let offer = offers[indexPath.item]
-        cell.configure(with: offer,countdown: offer.countdown)
+        cell.configure(with: offer, countdown: offer.countdown)
         return cell
     }
 

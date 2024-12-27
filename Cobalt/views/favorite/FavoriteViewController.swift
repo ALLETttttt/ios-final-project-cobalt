@@ -30,6 +30,11 @@ class FavoriteViewController: UIViewController, UICollectionViewDataSource, UICo
         loadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
+    }
+    
     func loadData() {
         NetworkManager.shared.fetchLikedProducts { [weak self] products, error in
             DispatchQueue.main.async {

@@ -19,7 +19,12 @@ class OfferCell: UICollectionViewCell {
         minutesLabel.text = model.minutes
         secondsLabel.text = model.seconds
         descriptionLabel.text = model.descriptionText
-        customImageView.image = UIImage(named: model.imageName)
+        if let imageUrl = URL(string: model.imageName) {
+            customImageView.kf.setImage(with: imageUrl, placeholder: UIImage(named: "placeholder"))
+        } else {
+            customImageView.image = UIImage(named: "ferrari")
+        }
+//        customImageView.image = UIImage(named: model.imageName)
         percent.text = model.percent
         
         self.secondsRemaining = countdown
