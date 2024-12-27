@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var previewImage: UIImageView!
     @IBOutlet weak var seeMoreLabel: UILabel!
     
+    private var selectedProduct: ProductModel?
+    
     let categoryIconImageList = ["Electronics", "Jewellery", "Men`s clothing", "Women`s clothing"]
     var products: [ProductModel] = []
     
@@ -88,10 +90,17 @@ class ViewController: UIViewController {
         categoryListCollectionView.register(UINib(nibName: "CategoryListViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoryListViewCell")
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailViewController else {
+            return
+        }
+        detailVC.configure(with: selectedProduct)
+    }
+    
 }
 
 extension ViewController:
-    UICollectionViewDataSource, UICollectionViewDelegate {
+    UICollectionViewDataSource {
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == productListCollectionView {
@@ -131,4 +140,12 @@ extension ViewController:
     }
     
     
+}
+
+
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedProduct = products[indexPath.row]
+        performSegue(withIdentifier: "detailedProductPreview", sender: nil)
+    }
 }

@@ -21,6 +21,7 @@ class ExploreViewController: UIViewController {
     
     var filteredProducts: [ProductModel] = []
     var isSearchActive: Bool = false
+    private var selectedProduct: ProductModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,9 +58,17 @@ class ExploreViewController: UIViewController {
         productListCollectionView.register(UINib(nibName: "AllProductsListViewCell", bundle: nil), forCellWithReuseIdentifier: "AllProductsListViewCell")
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailViewController else {
+            return
+        }
+        detailVC.configure(with: selectedProduct)
+    }
+    
+    
 }
 
-extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension ExploreViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return isSearchActive ? filteredProducts.count: products.count
     }
@@ -92,5 +101,13 @@ extension ExploreViewController: UISearchBarDelegate {
             filteredProducts = products.filter { $0.name.lowercased().contains(searchText.lowercased()) }
         }
         productListCollectionView.reloadData()
+    }
+}
+
+
+extension ExploreViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedProduct = products[indexPath.row]
+        performSegue(withIdentifier: "detailedProductList", sender: nil)
     }
 }
