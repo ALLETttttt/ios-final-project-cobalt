@@ -331,7 +331,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mv9-iI-8N9">
                                 <rect key="frame" x="16" y="217" width="361" height="552"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a71-pZ-pHv">
                                     <size key="itemSize" width="361" height="213"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -651,7 +651,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xI-VG-YBc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1211.4503816793892" y="1795.0704225352113"/>
+            <point key="canvasLocation" x="-1199" y="1846"/>
         </scene>
         <!--Explore View Controller-->
         <scene sceneID="D3x-Ny-rXX">

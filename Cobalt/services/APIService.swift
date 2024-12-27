@@ -35,7 +35,7 @@ import Alamofire
 
 class NetworkManager {
     static let shared = NetworkManager()
-    private let baseURL = "http://127.0.0.1:8000/api"  // Replace with your Django backend URL
+    private let baseURL = "http://127.0.0.1:8000/api"
     
     func fetchProducts(completion: @escaping ([ProductModel]?, Error?) -> Void) {
         AF.request("\(baseURL)/products/", method: .get)
@@ -48,6 +48,23 @@ class NetworkManager {
                 switch response.result {
                 case .success(let products):
                     completion(products, nil)
+                case .failure(let error):
+                    completion(nil, error)
+                }
+            }
+    }
+    
+    func fetchOffers(completion: @escaping ([OfferModel]?, Error?) -> Void) {
+        AF.request("\(baseURL)/offers/", method: .get)
+            .responseData { response in
+                if let data = response.data, let json = String(data: data, encoding: .utf8) {
+                    print("Received JSON:", json)
+                }
+            }
+            .responseDecodable(of: [OfferModel].self) { response in
+                switch response.result {
+                case .success(let offers):
+                    completion(offers, nil)
                 case .failure(let error):
                     completion(nil, error)
                 }
