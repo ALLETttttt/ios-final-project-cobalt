@@ -7,19 +7,10 @@
 
 import UIKit
 
-class FavoriteViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class FavoriteViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-//    let products = [
-//        FavoriteModel(name: "Nike Air Max 270", price: 299.43, oldPrice: 534.33, rating: 4, image: "nike_image"),
-//        FavoriteModel(name: "FS - Nike Air Max React", price: 249.43, oldPrice: 499.33, rating: 5, image: "nike_image"),
-//        FavoriteModel(name: "Nike Air Max 270", price: 299.43, oldPrice: 534.33, rating: 4, image: "nike_image"),
-//        FavoriteModel(name: "FS - Nike Air Max React", price: 249.43, oldPrice: 499.33, rating: 5, image: "nike_image"),
-//        FavoriteModel(name: "Nike Air Max 270", price: 299.43, oldPrice: 534.33, rating: 4, image: "nike_image"),
-//        FavoriteModel(name: "FS - Nike Air Max React", price: 249.43, oldPrice: 499.33, rating: 5, image: "nike_image")
-//
-//    ]
     var products: [ProductModel] = []
 
     override func viewDidLoad() {
@@ -29,6 +20,8 @@ class FavoriteViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.delegate = self
         loadData()
     }
+    
+    private var selectedProduct: ProductModel?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -54,6 +47,13 @@ class FavoriteViewController: UIViewController, UICollectionViewDataSource, UICo
                 self?.collectionView.reloadData()
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailViewController else {
+            return
+        }
+        detailVC.configure(with: selectedProduct)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -90,5 +90,12 @@ class FavoriteViewController: UIViewController, UICollectionViewDataSource, UICo
         }
 
         return cell
+    }
+}
+
+extension FavoriteViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedProduct = products[indexPath.row]
+        performSegue(withIdentifier: "detailedProductFavourite", sender: nil)
     }
 }

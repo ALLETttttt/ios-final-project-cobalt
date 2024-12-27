@@ -1,9 +1,6 @@
 import UIKit
 import Kingfisher
 
-//extension Notification.Name {
-//    static let productLikeStatusChanged = Notification.Name("productLikeStatusChanged")
-//}
 
 class AllProductsListViewCell: UICollectionViewCell {
     
@@ -40,15 +37,9 @@ class AllProductsListViewCell: UICollectionViewCell {
                 }
                 
                 if let isLiked = isLiked {
-                    // Update UI based on server response
                     self?.updateLikeButtonState(isLiked: isLiked)
-                    // Update local product model
                     self?.product?.isLiked = isLiked
                     
-//                    NotificationCenter.default.post(
-//                                            name: .productLikeStatusChanged,
-//                                            object: nil
-//                                        )
                 }
             }
         }
@@ -70,10 +61,8 @@ class AllProductsListViewCell: UICollectionViewCell {
             productImage.image = UIImage(named: "ferrari")
         }
         
-        // Set price
         productPriceLabel.text = String(format: "$%.2f", product.price)
         
-        // Set initial like state based on backend data
         updateLikeButtonState(isLiked: product.isLiked)
     }
 }
