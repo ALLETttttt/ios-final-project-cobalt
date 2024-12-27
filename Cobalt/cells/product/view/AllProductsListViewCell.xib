@@ -35,32 +35,33 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AXh-i5-nUG">
-                        <rect key="frame" x="197" y="238" width="45" height="32"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="35" id="SiB-ZO-cHa"/>
-                            <constraint firstAttribute="width" constant="45" id="zNv-tj-KRy"/>
-                        </constraints>
-                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMh-VV-0xw">
+                        <rect key="frame" x="173" y="237" width="64" height="54"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="empty_heart"/>
+                        <connections>
+                            <action selector="likeButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="6ab-fS-eB3"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="4hc-SA-1Bq" firstAttribute="top" secondItem="G8Q-sf-FRN" secondAttribute="bottom" constant="10" id="7T6-pI-88s"/>
-                <constraint firstAttribute="bottom" secondItem="AXh-i5-nUG" secondAttribute="bottom" constant="30" id="9B2-Pu-dwo"/>
                 <constraint firstAttribute="trailing" secondItem="4hc-SA-1Bq" secondAttribute="trailing" constant="10" id="D76-eM-e5X"/>
                 <constraint firstItem="G8Q-sf-FRN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Jg2-Oq-gJe"/>
+                <constraint firstAttribute="trailing" secondItem="sMh-VV-0xw" secondAttribute="trailing" constant="15" id="QCT-bY-tYq"/>
                 <constraint firstAttribute="trailing" secondItem="G8Q-sf-FRN" secondAttribute="trailing" constant="10" id="bp3-bk-Bn9"/>
                 <constraint firstItem="G8Q-sf-FRN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="fAN-nI-fbU"/>
+                <constraint firstAttribute="bottom" secondItem="sMh-VV-0xw" secondAttribute="bottom" constant="10" id="hOV-6b-GJP"/>
                 <constraint firstItem="4hc-SA-1Bq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="pmK-1q-qRd"/>
                 <constraint firstItem="1QX-Ks-dfe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" symbolic="YES" id="qxn-ha-Q3Y"/>
                 <constraint firstAttribute="bottom" secondItem="1QX-Ks-dfe" secondAttribute="bottom" constant="30" id="rlM-DS-jrO"/>
-                <constraint firstAttribute="trailing" secondItem="AXh-i5-nUG" secondAttribute="trailing" constant="10" id="xvi-fG-jqU"/>
             </constraints>
             <size key="customSize" width="252" height="301"/>
             <connections>
                 <outlet property="productImage" destination="G8Q-sf-FRN" id="i4P-mB-zbe"/>
-                <outlet property="productLike" destination="AXh-i5-nUG" id="cdm-pA-AY8"/>
+                <outlet property="productLike" destination="sMh-VV-0xw" id="bCQ-cy-CiU"/>
                 <outlet property="productNameLabel" destination="4hc-SA-1Bq" id="0lJ-m4-L0L"/>
                 <outlet property="productPriceLabel" destination="1QX-Ks-dfe" id="JYu-ui-O3e"/>
             </connections>
@@ -68,6 +69,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="empty_heart" width="40" height="40"/>
     </resources>
 </document>
